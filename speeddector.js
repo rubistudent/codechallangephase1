@@ -1,6 +1,8 @@
+const prompt= require('prompt-sync')();
+const speed=parseInt(prompt("enter speed"))
+//speed test
 
-speed test
-11:11
+
 function speedDetector(speed) {
     let points = (speed - 70) / 5; // Calculation of number of points with every 5 units above limit same as a point.
     if (speed <= 70) {
@@ -11,4 +13,4 @@ function speedDetector(speed) {
         console.log(`Points: ${points}`);
     }
 }
-speedDetector(130)
+speedDetector(speed)

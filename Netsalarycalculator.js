@@ -1,6 +1,8 @@
-
+const prompt= require('prompt-sync')();
+const salary= prompt("Enter salary")
+const benefits = prompt("Enter benefits")
 function salo(salary, benefits){
-    let gross = salary + benefits;
+    let gross = parseInt(salary) + parseInt(benefits);
     let NSSF = gross * 0.06;
 // Gross entails salary altogether with benefits
 if (gross <= 24000) {
@@ -56,7 +58,8 @@ console.log('NSSF deduction:', NSSF)
     let netSalary = 'Net Salary:  ' + (gross - (NSSF + PAYE + NHIF ))
     return netSalary;
 }
-    console.log(salo(40000, 5000));
+    //console.log(salo(40000, 5000));
+    console.log(salo(salary,benefits));
 
 
 
